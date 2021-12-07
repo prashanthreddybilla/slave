@@ -2,7 +2,7 @@ def getEnvVar(String paramName){
 
  //return sh (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
  //return bat (script: "set str = 'find '${paramName}' ENV_VARS/project.properties' set str = %str:'${paramName}'=% echo %str%" , returnStdout: true ).trim();
- return bat (script: "find '${paramName}' ENV_VARS/project.properties" , returnStdout: true ).trim();
+ return bat (script: "find "${paramName}" ENV_VARS/project.properties" , returnStdout: true ).trim();
 }
 
 pipeline {

@@ -1,3 +1,9 @@
+def getEnvVar(String paramName){
+ return sh (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+}
+
+pipeline {
+    
 agent {
         label 'Windows-Slave'
           }

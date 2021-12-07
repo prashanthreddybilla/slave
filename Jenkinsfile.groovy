@@ -1,5 +1,5 @@
 agent {
-        label 'ss-build-lab'
+        label 'Windows-Slave'
           }
         
     stages {

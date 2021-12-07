@@ -16,7 +16,8 @@ agent {
         	steps{
             
         		    script{		
-                    'call C:\\tools\\cygwin64\\Cygwin.bat'
+                        bat label: '', script: '''call C:\\tools\\cygwin64\\Cygwin.bat
+                        cd %WORKSPACE%'''
                     env.JCLASS_NAME = getEnvVar('JCLASS_NAME')		
 				    env.JCLASS_VERSION = getEnvVar('JCLASS_VERSION')
                     env.JCLASS_SUBVERSION = getEnvVar('JCLASS_SUBVERSION')

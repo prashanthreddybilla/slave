@@ -1,5 +1,8 @@
 def getEnvVar(String paramName){
- return sh (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+
+ //return sh (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+ return bat (script: "find '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+ 
 }
 
 pipeline {
@@ -16,8 +19,6 @@ agent {
         	steps{
             
         		    script{		
-                        bat label: '', script: '''call C:\\tools\\cygwin64\\Cygwin.bat
-                        cd %WORKSPACE%'''
                     env.JCLASS_NAME = getEnvVar('JCLASS_NAME')		
 				    env.JCLASS_VERSION = getEnvVar('JCLASS_VERSION')
                     env.JCLASS_SUBVERSION = getEnvVar('JCLASS_SUBVERSION')

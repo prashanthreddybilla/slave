@@ -22,7 +22,8 @@ agent {
         	steps{
             
         		    script{	
-                    C:\Program Files\Git 	git-bash.exe
+                    //call C:\Program Files\Git 	git-bash.exe
+                    bat label: '', script: 'cd C:\\Program Files \\Git && .\\git.bash.exe  '
                     env.JCLASS_NAME = getEnvVar('JCLASS_NAME')		
 				    env.JCLASS_VERSION = getEnvVar('JCLASS_VERSION')
                     env.JCLASS_SUBVERSION = getEnvVar('JCLASS_SUBVERSION')

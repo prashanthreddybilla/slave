@@ -1,8 +1,11 @@
 def getEnvVar(String paramName){
 
- //return sh (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+ return sh (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+ 
+ //sh (script: "grep 'JCLASS_NAME' ENV_VARS/project.properties|cut -d'=' -f2"
+ 
  //return bat (script: "set str = 'find '${paramName}' ENV_VARS/project.properties' set str = %str:'${paramName}'=% echo %str%" , returnStdout: true ).trim();
- return bat (script: "find "%paramName%"  ENV_VARS/project.properties" , returnStdout: true ).trim();
+ //return bat (script: "find "%paramName%"  ENV_VARS/project.properties" , returnStdout: true ).trim();
 }
 
 pipeline {
@@ -18,7 +21,8 @@ agent {
                   }
         	steps{
             
-        		    script{		
+        		    script{	
+                    C:\Program Files\Git 	git-bash.exe
                     env.JCLASS_NAME = getEnvVar('JCLASS_NAME')		
 				    env.JCLASS_VERSION = getEnvVar('JCLASS_VERSION')
                     env.JCLASS_SUBVERSION = getEnvVar('JCLASS_SUBVERSION')

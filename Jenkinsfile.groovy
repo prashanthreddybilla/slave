@@ -24,7 +24,7 @@ agent {
         		    script{	
                     //call C:\Program Files\Git 	git-bash.exe
                     // bat label: '', script: 'call C:\\Program Files\\Git\\git-bash.exe'
-                    bat label: '', script: 'cd C:\\Program Files\\Git && .\\git-bash.exe
+                    bat label: ''', script: 'cd C:\\Program Files\\Git && .\\git-bash.exe
                     env.JCLASS_NAME = getEnvVar('JCLASS_NAME')		
 				    env.JCLASS_VERSION = getEnvVar('JCLASS_VERSION')
                     env.JCLASS_SUBVERSION = getEnvVar('JCLASS_SUBVERSION')
@@ -33,7 +33,8 @@ agent {
                     env.GIT_URL = getEnvVar('GIT_URL')
                     env.GCP_CREDENTIALS_ID = getEnvVar('GCP_CREDENTIALS_ID')
                     env.CLOUD_STORAGE_BUCKET_NAME = getEnvVar('CLOUD_STORAGE_BUCKET_NAME')
-                    env.PATTERN = getEnvVar('PATTERN')'
+                    env.PATTERN = getEnvVar('PATTERN')
+                    '''
                 
                 
 					//env.CLUSTER_CONTEXT=getEnvVar('CLUSTER_CONTEXT')

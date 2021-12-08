@@ -5,7 +5,7 @@
 //Monday=abcdef
 //Tuesday=kfgh
 
-def props = readProperties  file:'/ENV_VARS/project.properties'
+def props = readProperties  file:'${workspace}/ENV_VARS/project.properties'
 def Var1= props['JCLASS_NAME']
 def Var2= props['JCLASS_VERSION']
 def Var3= props['JCLASS_SUBVERSION']

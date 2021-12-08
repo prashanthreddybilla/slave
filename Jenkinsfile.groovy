@@ -1,9 +1,10 @@
 def getEnvVar(String paramName){
 
- return bat (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+ //return sh (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+ //return bat (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
  
  
- //return bat (script: 'cd C:\\Program Files\\Git && .\\git-bash.exe grep %paramName% ENV_VARS/project.properties|cut -d'=' -f2', returnStdout: true).trim();
+ return bat (script: 'cd C:\\Program Files\\Git && .\\git-bash.exe "grep %paramName% ENV_VARS/project.properties|cut -d'=' -f2" ', returnStdout: true).trim();
  
  //return bat label: '', script: ''' 
 //cd C:\\Program Files\\Git && .\\git-bash.exe 

@@ -24,7 +24,7 @@ agent {
         		    script{	
                     //call C:\Program Files\Git 	git-bash.exe
                     // bat label: '', script: 'call C:\\Program Files\\Git\\git-bash.exe'
-                    bat label: '', script: 'cd C:\\Program Files\\Git && .\\git-bash.exe %WORKSPACE%grep 'JCLASS_NAME' ENV_VARS/project.properties|cut -d'=' -f2'
+                    bat label: '', script: 'cd C:\\Program Files\\Git && .\\git-bash.exe cd C:\\%WORKSPACE% '
                     env.JCLASS_NAME = getEnvVar('JCLASS_NAME')		
 				    env.JCLASS_VERSION = getEnvVar('JCLASS_VERSION')
                     env.JCLASS_SUBVERSION = getEnvVar('JCLASS_SUBVERSION')

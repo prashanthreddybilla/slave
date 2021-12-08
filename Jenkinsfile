@@ -13,9 +13,9 @@ def Var3= props['JCLASS_SUBVERSION']
 
 pipeline {
     
-    //agent {
-      //  label 'ss-build-lab'
-        //  }
+    agent {
+        label 'master'
+          }
         
     stages {
         

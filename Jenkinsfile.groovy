@@ -6,12 +6,18 @@ def getEnvVar(String paramName){
  
  //return bat (script: 'cd C:\\Program Files\\Git && .\\git-bash.exe echo "hello" ', returnStdout: true).trim();
  
- return  bat (script: "cd C:\\Program Files\\Git && .\\git-bash.exe && cd:\\%WORKSPACE && grep %paramName% ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
+ return  bat (script: "cd C:\\tools\\cygwin64 && .\\Cygwin.bat grep %paramName% ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
  
  //sh (script: "grep 'JCLASS_NAME' ENV_VARS/project.properties|cut -d'=' -f2"
  
  //return bat (script: "set str = 'find '${paramName}' ENV_VARS/project.properties' set str = %str:'${paramName}'=% echo %str%" , returnStdout: true ).trim();
  //return bat (script: "find "%paramName%"  ENV_VARS/project.properties" , returnStdout: true ).trim();
+
+ //cd C:\cygwin64\
+//Cygwin.bat
+//grep 'JCLASS_NAME' project.properties|cut -d'=' -f2
+//echo "hi"
+
 }
 
 pipeline {

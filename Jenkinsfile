@@ -10,10 +10,11 @@
 def props = readProperties  file:'/var/lib/jenkins/workspace/pipelineutility/ENV_VARS/project.properties'
 
 pipeline {
-    environment {def Var1= props['JCLASS_NAME']
+    
+      def Var1= props['JCLASS_NAME']
 def Var2= props['JCLASS_VERSION']
 def Var3= props['JCLASS_SUBVERSION']
-    }
+  
     agent {
         label 'master'
           }
@@ -24,6 +25,10 @@ def Var3= props['JCLASS_SUBVERSION']
      stage('copy jarfiles') {
            steps {
                     script{
+                      def Var1= props['JCLASS_NAME']
+def Var2= props['JCLASS_VERSION']
+def Var3= props['JCLASS_SUBVERSION']
+  
                       echo "Var1=${Var1}"
                     echo "Var2=${Var2}"
                     }

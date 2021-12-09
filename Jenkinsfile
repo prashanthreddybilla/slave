@@ -19,7 +19,7 @@ pipeline {
           }
 
           environment{
-            version=BRANCH_NAME
+            version= 'BRANCH_NAME'
           }
         
     stages {

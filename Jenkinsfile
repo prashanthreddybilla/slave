@@ -10,12 +10,16 @@
 
 pipeline {
     
-      def Var1= props['JCLASS_NAME']
-def Var2= props['JCLASS_VERSION']
-def Var3= props['JCLASS_SUBVERSION']
+      //def Var1= props['JCLASS_NAME']
+//def Var2= props['JCLASS_VERSION']
+//def Var3= props['JCLASS_SUBVERSION']
   
     agent {
         label 'master'
+          }
+
+          environment{
+            version=BRANCH_NAME
           }
         
     stages {
@@ -24,14 +28,14 @@ def Var3= props['JCLASS_SUBVERSION']
      stage('copy jarfiles') {
            steps {
                     script{
-                      def props = readProperties  file:'/var/lib/jenkins/workspace/pipelineutility/ENV_VARS/project.properties'
+                      //def props = readProperties  file:'/var/lib/jenkins/workspace/pipelineutility/ENV_VARS/project.properties'
 
-                      def Var1= props['JCLASS_NAME']
-def Var2= props['JCLASS_VERSION']
-def Var3= props['JCLASS_SUBVERSION']
+                      //def Var1= props['JCLASS_NAME']
+                      //def Var2= props['JCLASS_VERSION']
+                      //def Var3= props['JCLASS_SUBVERSION']
   
-                      echo "Var1=${Var1}"
-                    echo "Var2=${Var2}"
+                      echo "${version}"
+                    //echo "Var2=${Var2}"
                     }
                  }
         }

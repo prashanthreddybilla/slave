@@ -19,7 +19,7 @@ pipeline {
           }
 
           environment{
-            version = "$BRANCH_NAME"
+            //version = "$BRANCH_NAME"
           }
         
     stages {
@@ -34,7 +34,7 @@ pipeline {
                       //def Var2= props['JCLASS_VERSION']
                       //def Var3= props['JCLASS_SUBVERSION']
   
-                      echo "$BRANCH_NAME"
+                      //echo "$BRANCH_NAME"
                       echo "$GIT_BRANCH"
                     //echo "Var2=${Var2}"
                     }

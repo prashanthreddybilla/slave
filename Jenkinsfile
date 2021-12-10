@@ -1,6 +1,6 @@
 def getEnvVar(String paramName){
  //return sh (script: "echo '${GIT_BRANCH}' ", returnStdout: true).trim();
- return sh (script: "echo '${GIT_BRANCH}' > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1", returnStdout: true).trim();
+ return sh (script: "echo '${GIT_BRANCH}' > b.txt | cut -d "/" -f 2 b.txt ", returnStdout: true).trim();
 }
 //
 //echo "orgin/8.4" > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1

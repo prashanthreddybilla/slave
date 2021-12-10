@@ -6,11 +6,11 @@
 //Tuesday=kfgh
 //def props = readProperties  file: 'dir/my.properties'
 //file:'/var/lib/jenkins/jobs/abc/test.properties
-
+def Var1= '${GIT_BRANCH}'
 
 pipeline {
     
- def Var1= '${GIT_BRANCH}'
+ 
 //def Var2= props['JCLASS_VERSION']
 //def Var3= props['JCLASS_SUBVERSION']
   

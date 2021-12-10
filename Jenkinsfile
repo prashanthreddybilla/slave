@@ -16,12 +16,13 @@ pipeline {
     agent {
         label 'master'
           }
+ 
+
+          environment{
  def Var1= "${GIT_BRANCH}"
 
-
-          //environment{
             //version = "$BRANCH_NAME"
-          //}
+          }
         
     stages {
         

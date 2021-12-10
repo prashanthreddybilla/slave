@@ -33,7 +33,7 @@ pipeline {
      stage('copy jarfiles') {
            steps {
                     script{
-                      env.version = getEnvVar('$Var1')
+                     env.version = getEnvVar('${Var1}')
                       //def props = readProperties  file:'/var/lib/jenkins/workspace/pipelineutility/ENV_VARS/project.properties'
 
                       //def Var1= props['JCLASS_NAME']

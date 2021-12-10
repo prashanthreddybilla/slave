@@ -1,6 +1,8 @@
-//def getEnvVar(String paramName){
- //return sh (script: "grep '${paramName}' ENV_VARS/project.properties|cut -d'=' -f2", returnStdout: true).trim();
-//}
+def getEnvVar(String paramName){
+ return sh (script: "echo "${paramName}" > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1", returnStdout: true).trim();
+}
+
+//echo "orgin/8.4" > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1
 //test.properties
 //Monday=abcdef
 //Tuesday=kfgh
@@ -20,6 +22,7 @@ pipeline {
 
           environment{
  def Var1= "${GIT_BRANCH}"
+  def version = getEnvVar('$Var1')
 
             //version = "$BRANCH_NAME"
           }

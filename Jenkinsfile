@@ -1,5 +1,5 @@
 def getEnvVar(String paramName){
- return sh (script: "echo '${paramName}' > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1 c.txt", returnStdout: true).trim();
+ return sh (script: "echo '${paramName}", returnStdout: true).trim();
 }
 //return sh (script: "echo '${paramName}' > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1", returnStdout: true).trim();
 //echo "orgin/8.4" > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1

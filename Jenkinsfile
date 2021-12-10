@@ -22,7 +22,7 @@ pipeline {
 
           environment{
  def Var1= "${GIT_BRANCH}"
-  def version = getEnvVar('$Var1')
+  //def version = getEnvVar('$Var1')
 
             //version = "$BRANCH_NAME"
           }
@@ -33,6 +33,7 @@ pipeline {
      stage('copy jarfiles') {
            steps {
                     script{
+                      env.version = getEnvVar('$Var1')
                       //def props = readProperties  file:'/var/lib/jenkins/workspace/pipelineutility/ENV_VARS/project.properties'
 
                       //def Var1= props['JCLASS_NAME']

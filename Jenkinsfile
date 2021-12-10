@@ -6,7 +6,6 @@
 //Tuesday=kfgh
 //def props = readProperties  file: 'dir/my.properties'
 //file:'/var/lib/jenkins/jobs/abc/test.properties
-def Var1= "${GIT_BRANCH}"
 
 pipeline {
     
@@ -17,6 +16,8 @@ pipeline {
     agent {
         label 'master'
           }
+ def Var1= "${GIT_BRANCH}"
+
 
           //environment{
             //version = "$BRANCH_NAME"

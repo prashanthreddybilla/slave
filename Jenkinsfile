@@ -36,7 +36,7 @@ pipeline {
   
                       //echo "$BRANCH_NAME"
                       echo "$GIT_BRANCH"
-                    //echo "Var2=${Var2}"
+                    //echo "$Var1"
                     }
                  }
         }

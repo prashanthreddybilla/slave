@@ -1,5 +1,5 @@
 def getEnvVar(String paramName){
- return sh (script: "echo '${paramName}' ", returnStdout: true).trim();
+ return sh (script: "echo '${GIT_BRANCH}' ", returnStdout: true).trim();
 }
 //return sh (script: "echo '${paramName}' > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1", returnStdout: true).trim();
 //echo "orgin/8.4" > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1
@@ -33,7 +33,7 @@ pipeline {
      stage('copy jarfiles') {
            steps {
                     script{
-                     env.version = getEnvVar($Var1)
+                     env.version = getEnvVar('Var1')
                       //def props = readProperties  file:'/var/lib/jenkins/workspace/pipelineutility/ENV_VARS/project.properties'
 
                       //def Var1= props['JCLASS_NAME']

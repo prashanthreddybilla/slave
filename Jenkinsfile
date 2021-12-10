@@ -10,7 +10,7 @@
 
 pipeline {
     
-      def Var1= "$GIT_BRANCH"
+      def Var1= $GIT_BRANCH
 //def Var2= props['JCLASS_VERSION']
 //def Var3= props['JCLASS_SUBVERSION']
   

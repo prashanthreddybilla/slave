@@ -18,9 +18,9 @@ pipeline {
         label 'master'
           }
 
-          environment{
+          //environment{
             //version = "$BRANCH_NAME"
-          }
+          //}
         
     stages {
         

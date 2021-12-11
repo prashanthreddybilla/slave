@@ -21,12 +21,12 @@ pipeline {
           }
  
 
-          environment{
+          //environment{
  //def Var1= "${GIT_BRANCH}"
   //def version = getEnvVar('$Var1')
 
             //version = "$BRANCH_NAME"
-          }
+          //}
         
     stages {
         

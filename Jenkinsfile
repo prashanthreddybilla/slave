@@ -47,7 +47,7 @@ pipeline {
                      //echo "hello $var1"
                     //echo "$Var1"
                      
-                     //echo "hello ${version}"
+                     echo "hello ${version} from method"
                      //echo "$version"
                      //echo "%version%" 
                     }

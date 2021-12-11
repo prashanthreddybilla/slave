@@ -1,6 +1,6 @@
 def getEnvVar(String paramName){
- //return sh (script: "echo '${GIT_BRANCH}' ", returnStdout: true).trim();
- return sh (script: " pwd " , returnStdout: true).trim();
+ //return sh (script: "echo  ", returnStdout: true).trim();
+ return sh (script: "cat a.txt" , returnStdout: true).trim();
 }
 //
 //echo "orgin/8.4" > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1
@@ -34,7 +34,8 @@ pipeline {
      stage('copy jarfiles') {
            steps {
                     script{
-                     env.version = getEnvVar('git branch --show-current')
+                     sh 'echo $GIT_BRANCH > a.txt | cat a.txt'
+                     env.version = getEnvVar('test')
                       //def props = readProperties  file:'/var/lib/jenkins/workspace/pipelineutility/ENV_VARS/project.properties'
 
                       //def Var1= props['JCLASS_NAME']
@@ -45,7 +46,7 @@ pipeline {
                      // echo "$GIT_BRANCH"
                      //echo "hello $var1"
                     //echo "$Var1"
-                     sh 'echo $GIT_BRANCH > a.txt | cat a.txt'
+                     
                      //echo "hello ${version}"
                      //echo "$version"
                      //echo "%version%" 

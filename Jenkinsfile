@@ -43,6 +43,7 @@ pipeline {
   
                       //echo "$BRANCH_NAME"
                      // echo "$GIT_BRANCH"
+                     echo "hello $var1"
                     echo "$Var1"
                      echo "$version"
                     }

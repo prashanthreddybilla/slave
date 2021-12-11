@@ -1,6 +1,6 @@
 def getEnvVar(String paramName){
  //return sh (script: "echo  ", returnStdout: true).trim();
- return sh (script: "cat a.txt" , returnStdout: true).trim();
+ return sh (script: "cat a.txt | cut -b 7-" , returnStdout: true).trim();
 }
 //
 //echo "orgin/8.4" > b.txt |cut -d "/" -f 2 b.txt >c.txt | cat c.txt | cut -d "." -f 1

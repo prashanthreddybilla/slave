@@ -45,7 +45,7 @@ pipeline {
                      // echo "$GIT_BRANCH"
                      //echo "hello $var1"
                     //echo "$Var1"
-                     echo "$GIT_BRANCH" | cut -b 7-
+                     sh echo "$GIT_BRANCH" | cut -b 7-
                      //echo "hello ${version}"
                      //echo "$version"
                      //echo "%version%" 

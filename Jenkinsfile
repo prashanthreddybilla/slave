@@ -42,7 +42,7 @@ pipeline {
                       //def Var3= props['JCLASS_SUBVERSION']
   
                       //echo "$BRANCH_NAME"
-                      echo "$GIT_BRANCH"
+                     // echo "$GIT_BRANCH"
                     echo "$Var1"
                      echo "$version"
                     }

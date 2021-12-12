@@ -49,6 +49,7 @@ pipeline {
                     //echo "$Var1"
                      
                      echo "hello ${version} from method"
+                     echo "the subvesrion is${subversion}"
                      //echo "$version"
                      //echo "%version%" 
                     }

@@ -50,6 +50,7 @@ pipeline {
                      
                      echo "hello ${version} from method"
                      echo "the subvesrion is${subversion}"
+                     sh'rm a.txt'
                      //echo "$version"
                      //echo "%version%" 
                     }
